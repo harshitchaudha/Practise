@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>
+Calculator
+</title>
+<style>
+textarea
+{
+text-align:right;
+background-color:skyblue;
+width:180px;
+}
+button
+{
+width:50px;
+border-radius:5px;
+background-color:yellow;
+}
+</style>
+<script>
+function display(x)
+{
+document.getElementById("result").innerHTML+=x;
+}
+function abc()
+{
+var y=document.getElementById("result").innerHTML;
+var z=eval(y);
+document.getElementById("result").innerHTML=z;
+}
+function clear1()
+{
+document.getElementById("result").innerHTML="";
+}
+</script>
+</head>
+<body>
+<table border=1 align=center>
+<tr>
+<td colspan=3 bgcolor="white"><textarea id=result disabled></textarea></td>
+<th><button type=button onclick=clear1()>C</button></th>
+</tr>
+<tr>
+<th><button type=button onclick=display('9')>9</button></th>
+<th><button type=button onclick=display('8')>8</button></th>
+<th><button type=button onclick=display('7')>7</button></th>
+<th><button type=button onclick=display('-')>-</button></th>
+</tr>
+<tr>
+<th><button type=button onclick=display('6')>6</button></th>
+<th><button type=button onclick=display('5')>5</button></th>
+<th><button type=button onclick=display('4')>4</button></th>
+<th><button type=button onclick=display('+')>+</button></th>
+</tr>
+<tr>
+<th><button type=button onclick=display('3')>3</button></th>
+<th><button type=button onclick=display('2')>2</button></th>
+<th><button type=button onclick=display('1')>1</button></th>
+<th><button type=button onclick=display('*')>*</button></th>
+</tr>
+<tr>
+<th><button type=button onclick=display('.')>.</button></th>
+<th><button type=button onclick=display('0')>0</button></th>
+<th><button type=button onclick=abc()>=</button></th>
+<th><button type=button onclick=display('/')>/</button></th>
+</tr>
+</table>
+</body>
+</html>
